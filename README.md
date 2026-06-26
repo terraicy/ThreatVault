@@ -27,15 +27,11 @@ FastAPI serves the API and static frontend. SQLite is the default demo database.
 
 ## Screenshots
 
-Expected screenshots live in `docs/screenshots/`:
+![ThreatVault dashboard](assets/screenshots/dashboard.png)
 
-- `dashboard.png`
-- `list-view.png`
-- `detail-view.png`
-- `settings.png`
-- `api-docs.png`
-
-See `docs/screenshots/README.md` for capture instructions.
+| List view | Detail view | Settings |
+| --- | --- | --- |
+| ![ThreatVault list view](assets/screenshots/list-view.png) | ![ThreatVault detail view](assets/screenshots/detail-view.png) | ![ThreatVault settings](assets/screenshots/settings.png) |
 
 ## Quick Start
 
