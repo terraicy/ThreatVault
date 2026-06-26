@@ -23,7 +23,6 @@
 
 ![SOC Dashboard](docs/screenshots/dashboard.png)
 ![Analysis Report](docs/screenshots/analysis-report.png)
-![Submit Sample Report](docs/screenshots/submit-sample-report.png)
 
 ## Быстрый старт
 
