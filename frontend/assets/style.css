@@ -95,6 +95,17 @@ nav { display: flex; flex-direction: column; gap: 0.25rem; flex: 1; }
 .topbar h2 { font-size: 1.5rem; font-weight: 600; }
 
 .topbar-actions { display: flex; gap: 0.5rem; }
+.demo-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  border-radius: 6px;
+  background: var(--bg-hover);
+  color: var(--accent);
+  padding: 0.45rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
 
 .topbar-actions input {
   background: var(--bg-card);

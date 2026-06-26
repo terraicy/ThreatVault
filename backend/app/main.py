@@ -85,6 +85,7 @@ def create_app() -> FastAPI:
             "status": "ok",
             "service": settings.app_name,
             "version": settings.app_version,
+            "demo_mode": settings.demo_mode,
         }
 
     return app

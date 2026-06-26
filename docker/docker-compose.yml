@@ -10,6 +10,7 @@ services:
       - THREATVAULT_CELERY_BROKER_URL=redis://redis:6379/1
       - THREATVAULT_CELERY_RESULT_BACKEND=redis://redis:6379/2
       - THREATVAULT_ENABLE_CACHE=true
+      - THREATVAULT_DEMO_MODE=true
     volumes:
       - uploads:/app/uploads
     depends_on:

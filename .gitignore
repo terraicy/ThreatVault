@@ -22,6 +22,12 @@ backend/models/*.lgb
 # Env
 .env
 .env.local
+.env.*
+!.env.example
+node_modules/
+.next/
+coverage/
+.cache/
 
 # OS
 .DS_Store

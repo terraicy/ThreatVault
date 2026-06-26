@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     app_name: str = "ThreatVault"
     app_version: str = "1.0.0"
     debug: bool = True
+    demo_mode: bool = True
 
     api_prefix: str = "/api/v1"
     host: str = "0.0.0.0"
