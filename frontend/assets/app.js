@@ -11,7 +11,7 @@ function riskClass(score) {
 
 function truncate(s, n = 16) {
   if (!s) return '';
-  return s.length > n ? s.slice(0, n) + '…' : s;
+  return s.length > n ? s.slice(0, n) + '...' : s;
 }
 
 async function api(path, opts = {}) {
@@ -68,7 +68,7 @@ async function loadDashboard() {
             <span class="risk-badge risk-medium">${f.count}</span>
           </div>
         `).join('')
-      : '<p style="color: var(--text-muted)">No flags yet — submit a sample</p>';
+      : '<p style="color: var(--text-muted)">No detection flags yet. Submit a sample</p>';
 
     renderRecentTable(reports);
   } catch (e) {
@@ -97,7 +97,7 @@ async function loadReports() {
       <td>${truncate(r.id, 12)}</td>
       <td>${r.filename}</td>
       <td><span class="risk-badge ${riskClass(r.risk_score)}">${r.risk_score}</span></td>
-      <td>${r.sandbox_analysis?.verdict || '—'}</td>
+      <td>${r.sandbox_analysis?.verdict || 'None'}</td>
       <td>${new Date(r.created_at).toLocaleString()}</td>
       <td><button class="btn secondary small" onclick="viewReport('${r.id}')">Details</button></td>
     </tr>
@@ -118,10 +118,10 @@ async function loadIOCFeed() {
   });
 
   $('#ioc-feed').innerHTML = `
-    <div class="ioc-group"><h4>Domains (${allDomains.size})</h4><ul>${[...allDomains].slice(0, 20).map(d => `<li>${d}</li>`).join('') || '<li>—</li>'}</ul></div>
-    <div class="ioc-group"><h4>IPs (${allIPs.size})</h4><ul>${[...allIPs].slice(0, 20).map(ip => `<li>${ip}</li>`).join('') || '<li>—</li>'}</ul></div>
-    <div class="ioc-group"><h4>File Paths</h4><ul>${[...allPaths].slice(0, 15).map(p => `<li>${p}</li>`).join('') || '<li>—</li>'}</ul></div>
-    <div class="ioc-group"><h4>Hashes</h4><ul>${reports.slice(0, 10).map(r => `<li>${truncate(r.sha256, 32)}</li>`).join('') || '<li>—</li>'}</ul></div>
+    <div class="ioc-group"><h4>Domains (${allDomains.size})</h4><ul>${[...allDomains].slice(0, 20).map(d => `<li>${d}</li>`).join('') || '<li>None yet</li>'}</ul></div>
+    <div class="ioc-group"><h4>IPs (${allIPs.size})</h4><ul>${[...allIPs].slice(0, 20).map(ip => `<li>${ip}</li>`).join('') || '<li>None yet</li>'}</ul></div>
+    <div class="ioc-group"><h4>File Paths</h4><ul>${[...allPaths].slice(0, 15).map(p => `<li>${p}</li>`).join('') || '<li>None yet</li>'}</ul></div>
+    <div class="ioc-group"><h4>Hashes</h4><ul>${reports.slice(0, 10).map(r => `<li>${truncate(r.sha256, 32)}</li>`).join('') || '<li>None yet</li>'}</ul></div>
   `;
 }
 
@@ -160,11 +160,11 @@ window.viewReport = async function(scanId) {
     <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
       <div class="report-section">
         <h4>Processes</h4>
-        <div class="code-block">${(report.behavior?.processes || []).join('\n') || '—'}</div>
+        <div class="code-block">${(report.behavior?.processes || []).join('\n') || 'None'}</div>
       </div>
       <div class="report-section">
         <h4>Network / Domains</h4>
-        <div class="code-block">${(report.behavior?.domains || []).join('\n') || '—'}</div>
+        <div class="code-block">${(report.behavior?.domains || []).join('\n') || 'None'}</div>
       </div>
     </div>
 
