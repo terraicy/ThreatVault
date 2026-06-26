@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatVault — Malware Analysis Platform</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🛡</div>
+        <div>
+          <h1>ThreatVault</h1>
+          <p>Malware Analysis Platform</p>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-item active" data-view="dashboard">Dashboard</button>
+        <button class="nav-item" data-view="upload">Submit Sample</button>
+        <button class="nav-item" data-view="reports">Reports</button>
+        <button class="nav-item" data-view="iocs">IOC Feed</button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="status-dot online"></span>
+        <span>API Online</span>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h2 id="page-title">SOC Dashboard</h2>
+        <div class="topbar-actions">
+          <input type="search" id="hash-search" placeholder="Search SHA256...">
+          <button id="search-btn" class="btn secondary">Lookup</button>
+        </div>
+      </header>
+
+      <!-- Dashboard -->
+      <section id="view-dashboard" class="view active">
+        <div class="stats-grid" id="stats-grid"></div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Risk Distribution</h3>
+            <div id="risk-chart" class="chart-placeholder"></div>
+          </div>
+          <div class="card">
+            <h3>Top Detection Flags</h3>
+            <div id="flags-list" class="flags-list"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Recent Scans</h3>
+          <table class="data-table" id="recent-table">
+            <thead>
+              <tr>
+                <th>Filename</th>
+                <th>SHA256</th>
+                <th>Risk</th>
+                <th>Status</th>
+                <th>Flags</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Upload -->
+      <section id="view-upload" class="view">
+        <div class="card upload-card">
+          <div class="dropzone" id="dropzone">
+            <div class="dropzone-icon">📁</div>
+            <p>Drag & drop sample or click to browse</p>
+            <span>PE, ELF, scripts — max 100MB</span>
+            <input type="file" id="file-input" hidden>
+          </div>
+          <div id="upload-progress" class="upload-progress hidden">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p>Analyzing through static → sandbox → ML pipeline...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reports list -->
+      <section id="view-reports" class="view">
+        <div class="card">
+          <table class="data-table" id="reports-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Filename</th>
+                <th>Risk Score</th>
+                <th>Verdict</th>
+                <th>Created</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- IOC Feed -->
+      <section id="view-iocs" class="view">
+        <div class="card">
+          <h3>Extracted Indicators</h3>
+          <div id="ioc-feed" class="ioc-feed"></div>
+        </div>
+      </section>
+
+      <!-- Report Detail Modal -->
+      <div id="report-modal" class="modal hidden">
+        <div class="modal-content">
+          <button class="modal-close" id="modal-close">&times;</button>
+          <div id="report-detail"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

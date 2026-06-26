@@ -1,0 +1,4 @@
+# Опционально: нативный YARA-движок (вместо pattern-based fallback)
+# Требует Microsoft C++ Build Tools на Windows:
+# https://visualstudio.microsoft.com/visual-cpp-build-tools/
+yara-python>=4.5.0
