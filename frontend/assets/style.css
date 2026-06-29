@@ -400,3 +400,4 @@ nav { display: flex; flex-direction: column; gap: 0.25rem; flex: 1; }
   .grid-2 { grid-template-columns: 1fr; }
   .sidebar { width: 200px; }
 }
+/* Project version: ThreatVault V1.1 */

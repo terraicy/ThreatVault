@@ -21,3 +21,4 @@ passlib>=1.7.4
 # yara-python — опционально, см. requirements-yara.txt
 # На Windows/Python 3.14 требует Visual C++ Build Tools для сборки из исходников.
 # Без него работает встроенный pattern-based fallback.
+# Project version: ThreatVault V1.1

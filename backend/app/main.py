@@ -92,3 +92,4 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+# Project version: ThreatVault V1.1

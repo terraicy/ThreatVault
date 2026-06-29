@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_prefix="THREATVAULT_")
 
     app_name: str = "ThreatVault"
-    app_version: str = "1.0.0"
+    app_version: str = "1.1.0"
     debug: bool = True
     demo_mode: bool = True
 
@@ -47,3 +47,4 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
+# Project version: ThreatVault V1.1

@@ -14,3 +14,4 @@ out = Path(__file__).parent.parent / "samples" / "safe_demo_sample.bin"
 out.parent.mkdir(exist_ok=True)
 out.write_bytes(SAMPLE)
 print(f"Created safe demo sample: {out} ({len(SAMPLE)} bytes)")
+# Project version: ThreatVault V1.1

@@ -1,4 +1,4 @@
-# ThreatVault V1.0 Deployment Notes
+# ThreatVault V1.1 Deployment Notes
 
 This public version is prepared for local/demo hosting, not production operation.
 
@@ -27,3 +27,4 @@ docker compose up --build
 - Keep uploads and local databases out of git.
 - Public sandbox behavior is simulation mode only.
 - Do not host unknown samples without real isolation.
+<!-- Project version: ThreatVault V1.1 -->

@@ -62,3 +62,4 @@ def cache_delete(key: str) -> None:
     if redis:
         redis.delete(f"tv:{key}")
     _memory_cache.pop(key, None)
+# Project version: ThreatVault V1.1

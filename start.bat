@@ -90,3 +90,4 @@ if !EXIT_CODE! neq 0 (
     echo See: %STARTUP_LOG% and logs\threatvault.log
     pause
 )
+REM Project version: ThreatVault V1.1

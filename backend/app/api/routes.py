@@ -112,3 +112,4 @@ async def list_reports(limit: int = 50, db: AsyncSession = Depends(get_db)):
         select(ScanReport).order_by(ScanReport.created_at.desc()).limit(min(limit, 200))
     )
     return [_to_analysis_report(r) for r in result.scalars().all()]
+# Project version: ThreatVault V1.1

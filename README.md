@@ -1,4 +1,4 @@
-# ThreatVault V1.0
+# ThreatVault V1.1
 
 Defensive file analysis dashboard for static indicators, simulated sandbox behavior, YARA matches and IOC review.
 
@@ -51,6 +51,13 @@ API docs: <http://localhost:8000/docs>
 
 Set `THREATVAULT_DEMO_MODE=true`. Demo mode is public-safe and does not require auth, SMTP or external credentials. Reports are local demo artifacts only.
 
+## Public Demo Readiness
+
+- Keep uploaded samples limited to benign test files in public environments.
+- Mark sandbox behavior as simulated in screenshots, copy and API notes.
+- Rotate or clear local report artifacts between hosted demo sessions.
+- Avoid exposing worker queues or model files in public demo deployments.
+
 ## Environment Variables
 
 Use `.env.example`. Do not commit private `.env`, uploads, databases or trained model files. Important variables include `THREATVAULT_DEMO_MODE`, `THREATVAULT_DATABASE_URL`, `THREATVAULT_REDIS_URL`, `THREATVAULT_ENABLE_*` and Celery URLs.
@@ -92,3 +99,4 @@ ThreatVault complements SentinelX endpoint telemetry, LogForge log management an
 ## License
 
 MIT.
+<!-- Project version: ThreatVault V1.1 -->

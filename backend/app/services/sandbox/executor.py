@@ -140,3 +140,4 @@ def run_sandbox(data: bytes, static: StaticAnalysisResult, timeout: int = 120) -
         screenshots=["/sandbox/captures/frame_001.png", "/sandbox/captures/frame_002.png"],
         verdict=verdict,
     )
+# Project version: ThreatVault V1.1

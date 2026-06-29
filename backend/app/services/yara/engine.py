@@ -85,3 +85,4 @@ def _fallback_yara_scan(data: bytes) -> list[YaraMatch]:
                 strings=hit_strings,
             ))
     return matches
+# Project version: ThreatVault V1.1

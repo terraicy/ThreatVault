@@ -28,3 +28,4 @@ def run_full_pipeline(self, file_data: bytes, filename: str):
         "static": static.model_dump(),
         "sandbox": sandbox.model_dump(),
     }
+# Project version: ThreatVault V1.1

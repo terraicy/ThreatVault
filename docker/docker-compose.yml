@@ -38,3 +38,4 @@ services:
 volumes:
   uploads:
   redis_data:
+# Project version: ThreatVault V1.1
