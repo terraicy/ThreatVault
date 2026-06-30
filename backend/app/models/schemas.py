@@ -114,4 +114,4 @@ class PlatformStats(BaseModel):
     cache_hits: int
     avg_risk_score: float
     top_flags: list[dict[str, Any]]
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

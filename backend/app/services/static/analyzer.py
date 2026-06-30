@@ -231,4 +231,4 @@ def analyze_static(data: bytes, filename: str = "") -> StaticAnalysisResult:
         suspicious_indicators=suspicious,
         headers=headers,
     )
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

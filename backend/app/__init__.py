@@ -1,4 +1,4 @@
 """ThreatVault — malware analysis platform."""
 
-__version__ = "1.1.0"
-# Project version: ThreatVault V1.1
+__version__ = "1.2.0"
+# Project version: ThreatVault V1.2

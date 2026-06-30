@@ -31,4 +31,4 @@ class ScanReport(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     error_message: Mapped[str | None] = mapped_column(Text, nullable=True)
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

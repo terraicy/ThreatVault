@@ -1,4 +1,4 @@
-# ThreatVault V1.1
+# ThreatVault V1.2
 
 Defensive file analysis dashboard for static indicators, simulated sandbox behavior, YARA matches and IOC review.
 
@@ -99,4 +99,4 @@ ThreatVault complements SentinelX endpoint telemetry, LogForge log management an
 ## License
 
 MIT.
-<!-- Project version: ThreatVault V1.1 -->
+<!-- Project version: ThreatVault V1.2 -->

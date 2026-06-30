@@ -38,4 +38,4 @@ logs/
 *.log
 !logs/.gitkeep
 docs/
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

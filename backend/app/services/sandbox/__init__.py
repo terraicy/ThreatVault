@@ -1,2 +1,2 @@
 
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

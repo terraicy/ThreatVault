@@ -201,4 +201,4 @@ def compute_risk_score(
 
     risk = min(base + static_boost + sandbox_boost + yara_boost, 100.0)
     return round(risk, 1), flags
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

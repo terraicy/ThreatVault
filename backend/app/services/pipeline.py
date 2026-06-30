@@ -255,4 +255,4 @@ async def get_report_by_hash(db: AsyncSession, sha256: str) -> ScanReport | None
         .order_by(ScanReport.created_at.desc())
     )
     return result.scalars().first()
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

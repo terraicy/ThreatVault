@@ -69,4 +69,4 @@ def setup_logging(
     logging.getLogger(__name__).info(
         "Logging initialized -> %s (level=%s)", log_dir.resolve(), level
     )
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2

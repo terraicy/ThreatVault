@@ -25,4 +25,4 @@ celery_app.conf.update(
 )
 
 celery_app.autodiscover_tasks(["app.workers"])
-# Project version: ThreatVault V1.1
+# Project version: ThreatVault V1.2
